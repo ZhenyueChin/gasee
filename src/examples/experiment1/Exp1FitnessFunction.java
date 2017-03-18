@@ -42,7 +42,7 @@ public class Exp1FitnessFunction implements FitnessFunction<SimpleMaterial> {
 
     public Exp1FitnessFunction(final int target) {
         this.target = target;
-        targetBitString = Integer.toBinaryString(target);
+        this.targetBitString = Integer.toBinaryString(target);
     }
 
     public int getTarget() {

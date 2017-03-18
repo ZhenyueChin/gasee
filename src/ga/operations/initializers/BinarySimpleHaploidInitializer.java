@@ -32,7 +32,7 @@ import java.util.List;
 
 /**
  * This class is a simple initializer that initializes a population of binary simple haploid individuals.
- * The probability governs the likelyhood of a randomly generated gene to contain the value 1.
+ * The probability governs the likelihood of a randomly generated gene to contain the value 1.
  *
  * @author Siu Kei Muk (David)
  * @since 8/09/16.
