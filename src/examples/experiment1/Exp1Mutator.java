@@ -56,6 +56,7 @@ public class Exp1Mutator implements Mutator<SimpleHaploid> {
     @Override
     public void mutate(@NotNull List<Individual<SimpleHaploid>> individuals) {
         for (Individual<SimpleHaploid> h : individuals) {
+//            because totally there is only one material in this individual
             SimpleMaterial dna = h.getChromosome().getMaterialsView().get(0);
             for (int i = 0; i < dna.getSize(); i++) {
                 if (!toFlip()) continue;
