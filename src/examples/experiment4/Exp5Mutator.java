@@ -12,22 +12,13 @@ import java.util.List;
 /**
  * Created by Chinyuer on 19/03/2017.
  */
-
-public class Exp4Mutator implements Mutator<SimpleHaploid>{
+public class Exp5Mutator implements Mutator<SimpleHaploid>{
     private double prob;
 
-    public Exp4Mutator(final double prob) {
+    public Exp5Mutator(final double prob) {
         if (prob < 0 || prob > 1) {
-            throw new IllegalArgumentException("Invalid probability");
+            throw new IllegalArgumentException("Value out of bound");
         }
-        this.prob = prob;
-    }
-
-    public double getProbability() {
-        return prob;
-    }
-
-    public void setProbability(final double prob) {
         this.prob = prob;
     }
 
@@ -40,9 +31,10 @@ public class Exp4Mutator implements Mutator<SimpleHaploid>{
         for (Individual<SimpleHaploid> h : individuals) {
             SimpleMaterial dna = h.getChromosome().getMaterialsView().get(0);
             for (int i=0; i<dna.getSize(); i++) {
-                if (!toFlit()) continue;
-                Gene<Integer> gene =  (Gene<Integer>) dna.getGene(i);
-                gene.setValue(gene.getValue() ^ 1);
+                if (toFlit()) {
+                    Gene<Integer> g = dna.getGene(i);
+                    g.setValue(1 - g.getValue());
+                }
             }
         }
     }

@@ -45,9 +45,9 @@ import ga.operations.selectionOperators.selectors.SimpleProportionalSelector;
  */
 public class Exp1Main {
 
-    private static final int target = 0xf71b72e5;
+    private static final int target = 120;
     private static final int size = 200;
-    private static final int maxGen = 2000;
+    private static final int maxGen = 5;
     private static final int numElites = 20;
     private static final double mutationRate = 0.05;
     private static final double crossoverRate = .8;
@@ -81,7 +81,7 @@ public class Exp1Main {
         Frame<SimpleHaploid> frame = new SimpleFrame<>(state,postOperator,statistics);
         frame.setPriorOperator(priorOperator);
         statistics.print(0);
-        for (int i = 1; i <= maxGen; i++) {
+        for (int i = 1; i < maxGen; i++) {
             frame.evolve();
             statistics.print(i);
             if (statistics.getOptimum(i) > maxFit - epsilon)
