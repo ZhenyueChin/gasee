@@ -4,7 +4,8 @@ import com.sun.istack.internal.NotNull;
 import ga.components.genes.Gene;
 
 /**
- * Created by Chinyuer on 26/03/2017.
+ * Created by Zhenyue Qin on 26/03/2017.
+ * The Australian National University.
  */
 public class DataGene<T> extends Gene<T>{
 
@@ -14,11 +15,11 @@ public class DataGene<T> extends Gene<T>{
 
     @Override
     public void setValue(@NotNull T value) {
-
+        this.value = value;
     }
 
     @Override
     public Gene<T> copy() {
-        return null;
+        return new DataGene<T>(value);
     }
 }

@@ -1,7 +1,8 @@
 package examples.projectHotspots;
 
 /**
- * Created by Chinyuer on 26/03/2017.
+ * Created by Zhenyue Qin on 26/03/2017.
+ * The Australian National University.
  */
 public class ProjectHotspotsMain {
 
