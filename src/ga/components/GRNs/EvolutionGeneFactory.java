@@ -1,109 +1,70 @@
 package ga.components.GRNs;
 
+import ga.components.genes.BinaryGene;
 import ga.components.genes.Gene;
 import ga.components.genes.GeneFactory;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Random;
+import java.lang.reflect.Array;
+import java.util.*;
 
 /**
  * Created by Zhenyue Qin on 26/03/2017.
  * The Australian National University.
  */
-public class EvolutionGeneFactory implements GeneFactory<IntegerDataGene[][]>{
+public class EvolutionGeneFactory implements GeneFactory<Integer[][]>{
 
-    private int nodeSize;
-    private int interactionSize;
-    private double perturbProbability;
-    private IntegerDataGene[][] interactions;
-    private IntegerDataGene[] target;
-    private IntegerDataGene[] states;
+    private int networkSize;
+    private int edgeSize;
+    private int maxCycle;
+    private int[][] nodes;
 
-    private void initialise(int nodeSize, int interactionSize) {
-        int maxInteractionSize = nodeSize * (nodeSize - 1) / 2;
-        if (nodeSize < 0 || interactionSize > maxInteractionSize) {
-            throw new IllegalArgumentException("Illegal network model!");
-        }
-        this.nodeSize = nodeSize;
-        this.interactionSize = interactionSize;
-        this.interactions = new IntegerDataGene[this.nodeSize+1][this.nodeSize+1];
-        for (int i=1; i<=this.nodeSize; i++) {
-            for (int j=i; j<=this.nodeSize; j++) {
-                this.interactions[i][j].setValue(Variables.noConnection);
+    public EvolutionGeneFactory(int networkSize, int maxCycle, int edgeSize) {
+        this.networkSize = networkSize;
+        this.edgeSize = edgeSize;
+        this.maxCycle = maxCycle;
+    }
+
+    private int[][] initialiseEdges(int m, int n) {
+        List<DirectedEdge> candidates = new ArrayList<DirectedEdge>();
+        for (int i=0; i<networkSize; i++) {
+            for (int j=0; j<networkSize; j++) {
+                candidates.add(new DirectedEdge(i, j));
             }
         }
+        final int[] edgeIndices = new Random().ints(0, networkSize * networkSize).distinct().limit(edgeSize).toArray();
+        List<DirectedEdge> edges = new ArrayList<DirectedEdge>();
 
-        this.generateInteractions();
-        this.perturb();
-    }
+        for (int edgeIndex : edgeIndices) {
+            edges.add(candidates.get(edgeIndex));
+        }
 
-    public IntegerDataGene[] getTarget() {
-        return this.target;
-    }
+        int[][] connections = new int[m][n];
 
-    private void initialStates() {
-        for (int i=1; i<=this.nodeSize; i++) {
-            if (this.getRandomBoolean()) {
-                this.states[i].setValue(Variables.active);
+        for (DirectedEdge edge : edges) {
+            if (this.flipACoin()) {
+              connections[edge.getLeft()][edge.getRight()] = 1;
             } else {
-                this.states[i].setValue(Variables.inactive);
+              connections[edge.getLeft()][edge.getRight()] = -1;
             }
         }
+        return connections;
     }
 
-    public EvolutionGeneFactory(int nodeSize, int interactionSize) {
-        this.initialise(nodeSize, interactionSize);
-        this.perturbProbability = 0.15;
+    private boolean flipACoin() {
+        return 0.5 < Math.random();
     }
 
-    public EvolutionGeneFactory(int nodeSize, int interactionSize, double perturbProbability) {
-        this.initialise(nodeSize, interactionSize);
-        this.perturbProbability = perturbProbability;
-    }
-
-    private void perturb() {
-        this.target = this.states.clone();
-        for (int i=1; i<=this.nodeSize; i++) {
-            if (Math.random() < this.perturbProbability) {
-                this.states[i].setValue(-this.states[i].getValue());
-            }
-        }
-    }
-
-    private boolean getRandomBoolean() {
-        return Math.random() < 0.5;
-    }
-
-    private int getFilledInteractionSize() {
-        int sum = 0;
-        for (int i=1; i<=nodeSize; i++) {
-            for (int j=i; j<=nodeSize; j++) {
-                if (this.interactions[i][j].getValue() != Variables.noConnection) {
-                    sum += 1;
-                }
-            }
-        }
-        return sum;
-    }
-
-    private void generateInteractions() {
-        while (this.getFilledInteractionSize() <= interactionSize) {
-            final int[] endPoints = new Random().ints(1, nodeSize + 1).distinct().limit(2).toArray();
-            if (this.interactions[endPoints[0]][endPoints[1]].getValue() == Variables.noConnection) {
-                if (this.getRandomBoolean()) {
-                    this.interactions[endPoints[0]][endPoints[1]].setValue(Variables.activating);
-                    this.interactions[endPoints[1]][endPoints[0]].setValue(Variables.activating);
-                } else {
-                    this.interactions[endPoints[0]][endPoints[1]].setValue(Variables.repressing);
-                    this.interactions[endPoints[1]][endPoints[0]].setValue(Variables.repressing);
-                }
-            }
-        }
+    private int[][] matrixCreate(int rows, int[] firstRow) {
+        /*
+        Initialise a 2D zero integer matrix
+         */
+        int[][] matrix = new int[rows][firstRow.length];
+        matrix[0] = firstRow;
+        return matrix;
     }
 
     @Override
     public EvolutionGene generateGene() {
-        return new EvolutionGene(this.interactions, this.target, this.states);
+        return null;
     }
 }
