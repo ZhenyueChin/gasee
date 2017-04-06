@@ -1,8 +1,12 @@
-package ga.components.GRNs;
+package examples.experiment4;
 
+import ga.components.GRNs.DirectedEdge;
+import ga.components.GRNs.GRN;
 import ga.components.genes.GeneFactory;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 /**
  * Created by Zhenyue Qin on 26/03/2017.
@@ -64,7 +68,7 @@ public class GeneRegulatoryNetworkFactory implements GeneFactory<Integer[][]>{
     }
 
     @Override
-    public GeneRegulatoryNetwork generateGene() {
+    public GRN generateGene() {
         return null;
     }
 }

@@ -52,10 +52,10 @@
 //  }
 //
 //  private Individual<SimpleHaploid> generateIndividual() {
-//    List<GeneRegulatoryNetwork> genes = new ArrayList<>(nodeSize);
+//    List<GRN> genes = new ArrayList<>(nodeSize);
 //    for (int i = 0; i < nodeSize; i++) {
 //      GeneRegulatoryNetworkFactory evolutionGeneFactory = new GeneRegulatoryNetworkFactory(nodeSize, interactionSize);
-//      GeneRegulatoryNetwork evolutionGene = evolutionGeneFactory.generateGene();
+//      GRN evolutionGene = evolutionGeneFactory.generateGene();
 //      genes.add(evolutionGene);
 //    }
 //    return new Individual<>(new SimpleHaploid(new SimpleMaterial(genes)));
