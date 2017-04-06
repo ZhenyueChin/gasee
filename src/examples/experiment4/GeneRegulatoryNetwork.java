@@ -16,13 +16,14 @@ import java.util.Random;
 public class GeneRegulatoryNetwork implements FitnessFunction<SimpleMaterial> {
 
   private SimpleMaterial target;
-  private int[][] nodes;
   private int[][] edges;
   private double fitness;
   private int maxCycle;
 
-  public GeneRegulatoryNetwork(int[] target) {
+  public GeneRegulatoryNetwork(int[] target, int[][] edges, int maxCycle) {
     this.target = this.convertIntArrayToDataGenes(target);
+    this.edges = edges;
+    this.maxCycle = maxCycle;
   }
 
   public SimpleMaterial convertIntArrayToDataGenes(int[] numbers) {
@@ -37,7 +38,7 @@ public class GeneRegulatoryNetwork implements FitnessFunction<SimpleMaterial> {
     /*
     Each gene (node) has a chance of mu to mutate.
      */
-    for (int i=0; i<nodes[0].length; i++) {
+    for (int i=0; i<this.target.getSize(); i++) {
       if (Math.random() <= mu) {
         this.toMutate(i);
       }
@@ -48,7 +49,7 @@ public class GeneRegulatoryNetwork implements FitnessFunction<SimpleMaterial> {
     /*
     Mutates the specified gene at index i according to the rule specified in page 9 of the original paper.
      */
-    int nodesSize = this.nodes[0].length; // number of nodes in the network
+    int nodesSize = this.target.getSize(); // number of nodes in the network
     int regulatorNumber = 0; // number of regulators for this gene.
 
     for (int j=0; j<this.edges.length; j++) {
@@ -117,11 +118,42 @@ public class GeneRegulatoryNetwork implements FitnessFunction<SimpleMaterial> {
   @Override
   public double evaluate(@NotNull SimpleMaterial phenotype) {
     DataGene[][] startAttractors = this.generateInitialAttractors(20, 0.15);
-    double[] fitnessValues = new double[startAttractors.length];
+    double fitnessValues = 0;
     for (int attractorIndex=0; attractorIndex<startAttractors.length; attractorIndex++) {
+      DataGene[] currentAttractor = startAttractors[attractorIndex];
+      int currentRound = 0;
+      boolean isNotStable;
+      do {
+        DataGene[] updatedState = this.updateState(currentAttractor);
+        isNotStable = this.hasNotAttainedAttractor(currentAttractor, updatedState);
+        currentAttractor = updatedState;
+        currentRound += 1;
+      }
+      while (currentRound < this.maxCycle && isNotStable);
 
+      if (currentRound < maxCycle) {
+        int hammingDistance = this.getHammingDistance(currentAttractor);
+        double thisFitness = Math.pow((1 - (hammingDistance / ((double) this.target.getSize()))), 5);
+        fitnessValues += thisFitness;
+      } else {
+        fitnessValues += 0;
+      }
     }
-    return 0;
+    this.fitness = fitnessValues;
+    return fitnessValues;
+  }
+
+  public int getHammingDistance(DataGene[] attractor) {
+    /*
+    TODO: make this cooler!
+     */
+    int count = 0;
+    for (int i=0; i<attractor.length; i++) {
+      if (attractor[i].getValue() == this.target.getGene(i).getValue()) {
+        count += 1;
+      }
+    }
+    return attractor.length - count;
   }
 
   @Override
@@ -139,6 +171,16 @@ public class GeneRegulatoryNetwork implements FitnessFunction<SimpleMaterial> {
       updatedState[i].setValue(this.checkActivationOrRepression(influence));
     }
     return updatedState;
+  }
+
+  public boolean hasNotAttainedAttractor(final DataGene[] currentState, final DataGene[] updatedState) {
+    int differenceCounts = 0;
+    for (int i=0; i<currentState.length; i++) {
+      if (currentState[i].getValue() != updatedState[i].getValue()) {
+        differenceCounts += 1;
+      }
+    }
+    return differenceCounts != 0;
   }
 
   public int checkActivationOrRepression(double influence) {

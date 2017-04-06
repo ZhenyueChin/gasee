@@ -12,7 +12,7 @@ import java.util.Random;
  * Created by Zhenyue Qin on 26/03/2017.
  * The Australian National University.
  */
-public class GeneRegulatoryNetworkFactory implements GeneFactory<Integer[][]>{
+public class GeneRegulatoryNetworkFactory{
 
     private int[] target;
     private int networkSize;
@@ -67,8 +67,8 @@ public class GeneRegulatoryNetworkFactory implements GeneFactory<Integer[][]>{
         return matrix;
     }
 
-    @Override
-    public GRN generateGene() {
-        return null;
+    public GeneRegulatoryNetwork generateGene() {
+        int[][] connections = this.initialiseEdges(this.networkSize, this.networkSize);
+        return new GeneRegulatoryNetwork(this.target.clone(), connections, this.maxCycle);
     }
 }

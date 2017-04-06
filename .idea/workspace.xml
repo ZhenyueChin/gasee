@@ -1,22 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="de5f1476-9551-404c-abb5-385bc0c5573f" name="Default" comment="deleted the old version">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetwork.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ga/components/genes/DataGene.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/examples/experiment4/Exp5FitnessFunction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/examples/experiment4/Exp5Main.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/examples/experiment4/Exp5Mutator.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/examples/experiment4/Exp5PriorOperator.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/examples/experiment4/Exp5Reproducer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/examples/experiment4/Exp5Statistics.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/examples/experiment5/Exp5Fitness.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/examples/experiment5/Exp5Initializer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/examples/experiment5/Exp5Main.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ga/components/GRNs/GeneRegulatoryNetwork.java" afterPath="$PROJECT_DIR$/src/ga/components/GRNs/GRN.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ga/components/GRNs/GeneRegulatoryNetworkFactory.java" afterPath="$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkFactory.java" />
+    <list default="true" id="de5f1476-9551-404c-abb5-385bc0c5573f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ga/components/GRNs/GRNSimpleHaploidInitializer.java" afterPath="$PROJECT_DIR$/src/ga/components/GRNs/GRNSimpleHaploidInitializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetwork.java" afterPath="$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetwork.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkFactory.java" afterPath="$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkFactory.java" />
     </list>
     <ignored path="ga-project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,28 +56,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GeneRegulatoryNetworkFactory.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GeneRegulatoryNetworkFactory.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+            <state relative-caret-position="511">
+              <caret line="69" column="32" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GeneRegulatoryNetwork.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GeneRegulatoryNetwork.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetwork.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+            <state relative-caret-position="765">
+              <caret line="51" column="41" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#635#636#0" expanded="true" />
-                <element signature="e#698#699#0" expanded="true" />
-                <element signature="e#813#823#0" expanded="true" />
-                <element signature="e#1905#1914#0" expanded="true" />
-                <element signature="e#2329#2338#0" expanded="true" />
+                <element signature="e#871#881#0" expanded="true" />
+                <element signature="e#1970#1979#0" expanded="true" />
+                <element signature="e#2394#2403#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -197,12 +183,12 @@
         <option value="$PROJECT_DIR$/src/ga/components/GRNs/EvolutionGene.java" />
         <option value="$PROJECT_DIR$/src/ga/components/GRNs/GeneRegulatoryNetworkFactory.java" />
         <option value="$PROJECT_DIR$/src/ga/components/GRNs/GeneRegulatoryNetwork.java" />
-        <option value="$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkFactory.java" />
         <option value="$PROJECT_DIR$/src/ga/components/GRNs/GRN.java" />
         <option value="$PROJECT_DIR$/src/ga/components/genes/Gene.java" />
         <option value="$PROJECT_DIR$/src/ga/components/genes/TernaryGene.java" />
         <option value="$PROJECT_DIR$/src/ga/components/genes/DataGene.java" />
         <option value="$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetwork.java" />
+        <option value="$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkFactory.java" />
       </list>
     </option>
   </component>
@@ -1039,7 +1025,7 @@
       <workItem from="1491097456572" duration="4935000" />
       <workItem from="1491351675140" duration="337000" />
       <workItem from="1491352023095" duration="1633000" />
-      <workItem from="1491353763761" duration="18013000" />
+      <workItem from="1491353763761" duration="20556000" />
     </task>
     <task id="LOCAL-00001" summary="test pushing">
       <created>1489484525413</created>
@@ -1083,11 +1069,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491442598777</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="on the way of implementing GRN">
+      <created>1491461327494</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1491461327494</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79006000" />
+    <option name="totallyTimeSpent" value="81549000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="23" width="1328" height="797" extended-state="0" />
@@ -1105,7 +1098,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31824416" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22816265" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22816265" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32692307" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1138,14 +1131,15 @@
     <MESSAGE value="found larson's code" />
     <MESSAGE value="evolution gene factory" />
     <MESSAGE value="deleted the old version" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleted the old version" />
+    <MESSAGE value="on the way of implementing GRN" />
+    <option name="LAST_COMMIT_MESSAGE" value="on the way of implementing GRN" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetwork.java</url>
-          <line>95</line>
+          <line>96</line>
           <properties class="examples.experiment4.GeneRegulatoryNetwork" method="flipACoin" />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
@@ -1539,26 +1533,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetwork.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="765">
+          <caret line="51" column="41" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#871#881#0" expanded="true" />
+            <element signature="e#1970#1979#0" expanded="true" />
+            <element signature="e#2394#2403#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetwork.java">
+    <entry file="file://$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#635#636#0" expanded="true" />
-            <element signature="e#698#699#0" expanded="true" />
-            <element signature="e#813#823#0" expanded="true" />
-            <element signature="e#1905#1914#0" expanded="true" />
-            <element signature="e#2329#2338#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="511">
+          <caret line="69" column="32" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
