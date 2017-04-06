@@ -2,7 +2,9 @@ package examples.experiment4;
 
 import ga.components.GRNs.DirectedEdge;
 import ga.components.GRNs.GRN;
+import ga.components.genes.DataGene;
 import ga.components.genes.GeneFactory;
+import ga.components.materials.SimpleMaterial;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,18 +16,24 @@ import java.util.Random;
  */
 public class GeneRegulatoryNetworkFactory{
 
-    private int[] target;
+    private SimpleMaterial target;
     private int networkSize;
     private int edgeSize;
     private int maxCycle;
-    private int[][] nodes;
 
     public GeneRegulatoryNetworkFactory(int[] target, int maxCycle, int edgeSize) {
-        this.target = target;
+        this.target = this.convertIntArrayToDataGenes(target);
         this.networkSize = target.length;
         this.edgeSize = edgeSize;
         this.maxCycle = maxCycle;
-        this.nodes = this.matrixCreate(maxCycle, this.target);
+    }
+
+    public SimpleMaterial convertIntArrayToDataGenes(int[] numbers) {
+      List<DataGene> dataGenes = new ArrayList<DataGene>();
+      for (int i=0; i<numbers.length; i++) {
+        dataGenes.add(new DataGene());
+      }
+      return new SimpleMaterial(dataGenes);
     }
 
     private int[][] initialiseEdges(int m, int n) {
@@ -67,8 +75,8 @@ public class GeneRegulatoryNetworkFactory{
         return matrix;
     }
 
-    public GeneRegulatoryNetwork generateGene() {
+    public GeneRegulatoryNetwork generateGeneRegulatoryNetwork() {
         int[][] connections = this.initialiseEdges(this.networkSize, this.networkSize);
-        return new GeneRegulatoryNetwork(this.target.clone(), connections, this.maxCycle);
+        return new GeneRegulatoryNetwork(this.target.copy(), connections, this.maxCycle);
     }
 }

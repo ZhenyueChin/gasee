@@ -52,6 +52,10 @@ public class SimpleMaterial implements Material {
         return size;
     }
 
+    public List<Gene> getGeneList() {
+      return Arrays.asList(this.strand);
+    }
+
     @Override
     public Gene getGene(final int index){
         return strand[index];

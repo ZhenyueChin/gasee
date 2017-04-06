@@ -2,10 +2,14 @@ package examples.experiment4;
 
 import com.sun.istack.internal.NotNull;
 import ga.components.genes.DataGene;
+import ga.components.genes.Gene;
+import ga.components.materials.Material;
 import ga.components.materials.SimpleMaterial;
 import ga.operations.fitnessFunctions.FitnessFunction;
 
+import javax.xml.crypto.Data;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -13,25 +17,30 @@ import java.util.Random;
  * Created by Zhenyue Qin on 6/04/2017.
  * The Australian National University.
  */
-public class GeneRegulatoryNetwork implements FitnessFunction<SimpleMaterial> {
+public class GeneRegulatoryNetwork extends SimpleMaterial implements FitnessFunction<SimpleMaterial> {
 
   private SimpleMaterial target;
   private int[][] edges;
   private double fitness;
   private int maxCycle;
 
-  public GeneRegulatoryNetwork(int[] target, int[][] edges, int maxCycle) {
-    this.target = this.convertIntArrayToDataGenes(target);
+  public GeneRegulatoryNetwork(SimpleMaterial target, int[][] edges, int maxCycle) {
+    super(target.getGeneList());
+    this.target = target.copy();
     this.edges = edges;
     this.maxCycle = maxCycle;
   }
 
-  public SimpleMaterial convertIntArrayToDataGenes(int[] numbers) {
-    List<DataGene> dataGenes = new ArrayList<DataGene>();
-    for (int i=0; i<numbers.length; i++) {
-      dataGenes.add(new DataGene());
+  public List<DataGene> convertSimpleMaterialToDataGeneArray(SimpleMaterial simpleMaterial) {
+    DataGene[] dataGenes = new DataGene[simpleMaterial.getSize()];
+    for (int i=0; i<simpleMaterial.getSize(); i++) {
+      dataGenes[i] = (DataGene) simpleMaterial.getGene(i).copy();
     }
-    return new SimpleMaterial(dataGenes);
+    return Arrays.asList(dataGenes);
+  }
+
+  public double getFitness() {
+    return fitness;
   }
 
   private void perturb(double mu) {
@@ -106,7 +115,7 @@ public class GeneRegulatoryNetwork implements FitnessFunction<SimpleMaterial> {
 
     for (int i=0; i<setSize; i++) {
       for (int j=0; j<this.target.getSize(); j++) {
-        returnables[i][j] = (DataGene) this.target.getGene(j);
+        returnables[i][j] = (DataGene) this.target.getGene(j).copy();
         if (Math.random() < p) {
           returnables[i][j].setRandomValue();
         }
@@ -115,9 +124,15 @@ public class GeneRegulatoryNetwork implements FitnessFunction<SimpleMaterial> {
     return returnables;
   }
 
-  @Override
-  public double evaluate(@NotNull SimpleMaterial phenotype) {
+  public static<T> void printTwoDimensionArray(T[][] anArray) {
+    for (int i=0; i<anArray.length; i++) {
+      System.out.println(Arrays.toString(anArray[i]));
+    }
+  }
+
+  public double evaluate() {
     DataGene[][] startAttractors = this.generateInitialAttractors(20, 0.15);
+    printTwoDimensionArray(startAttractors);
     double fitnessValues = 0;
     for (int attractorIndex=0; attractorIndex<startAttractors.length; attractorIndex++) {
       DataGene[] currentAttractor = startAttractors[attractorIndex];
@@ -157,12 +172,30 @@ public class GeneRegulatoryNetwork implements FitnessFunction<SimpleMaterial> {
   }
 
   @Override
+  public double evaluate(@NotNull SimpleMaterial phenotype) {
+    return 0;
+  }
+
+  @Override
   public void update() {
 
   }
 
+  public GeneRegulatoryNetwork copy() {
+    return new GeneRegulatoryNetwork(this.target.copy(), this.edges.clone(), this.maxCycle);
+  }
+
+  public DataGene[] initialseDataGeneArray(DataGene[] dataGenes) {
+    DataGene[] temp = dataGenes.clone();
+    for (int i=0; i<temp.length; i++) {
+      temp[i] = new DataGene();
+    }
+    return temp;
+  }
+
   public DataGene[] updateState(DataGene[] currentState) {
     DataGene[] updatedState = new DataGene[currentState.length];
+    updatedState = this.initialseDataGeneArray(updatedState);
     for (int i=0; i<currentState.length; i++) {
       double influence = 0;
       for (int j=0; j<currentState.length; j++) {
@@ -187,8 +220,17 @@ public class GeneRegulatoryNetwork implements FitnessFunction<SimpleMaterial> {
     if (influence > 0) {
       return 1;
     } else {
-      return 0;
+      return -1;
     }
   }
 
+  @Override
+  public int getSize() {
+    return this.target.getSize();
+  }
+
+  @Override
+  public Gene getGene(int index) {
+    return this.target.getGene(index);
+  }
 }

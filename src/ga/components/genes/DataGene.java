@@ -52,4 +52,9 @@ public class DataGene extends Gene<Integer> {
     }
     this.value = value;
   }
+
+  @Override
+  public String toString() {
+    return "" + this.value;
+  }
 }

@@ -82,7 +82,7 @@ public class NgWongInitializer implements Initializer<SimpleDiploid> {
     }
 
     /*
-    private NgWongSchemeGene generateGene() {
+    private NgWongSchemeGene generateGeneRegulatoryNetwork() {
         final double R = .25;
         double r = Math.random();
         for (int i = 0; i < chars.length; i++) {
