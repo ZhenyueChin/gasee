@@ -1,27 +1,27 @@
 package ga.components.GRNs;
 
-import ga.components.genes.BinaryGene;
-import ga.components.genes.Gene;
 import ga.components.genes.GeneFactory;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 /**
  * Created by Zhenyue Qin on 26/03/2017.
  * The Australian National University.
  */
-public class EvolutionGeneFactory implements GeneFactory<Integer[][]>{
+public class GeneRegulatoryNetworkFactory implements GeneFactory<Integer[][]>{
 
+    private int[] target;
     private int networkSize;
     private int edgeSize;
     private int maxCycle;
     private int[][] nodes;
 
-    public EvolutionGeneFactory(int networkSize, int maxCycle, int edgeSize) {
-        this.networkSize = networkSize;
+    public GeneRegulatoryNetworkFactory(int[] target, int maxCycle, int edgeSize) {
+        this.target = target;
+        this.networkSize = target.length;
         this.edgeSize = edgeSize;
         this.maxCycle = maxCycle;
+        this.nodes = this.matrixCreate(maxCycle, this.target);
     }
 
     private int[][] initialiseEdges(int m, int n) {
@@ -64,7 +64,7 @@ public class EvolutionGeneFactory implements GeneFactory<Integer[][]>{
     }
 
     @Override
-    public EvolutionGene generateGene() {
+    public GeneRegulatoryNetwork generateGene() {
         return null;
     }
 }
