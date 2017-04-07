@@ -19,7 +19,7 @@ import java.util.Random;
  * Created by Zhenyue Qin on 6/04/2017.
  * The Australian National University.
  */
-public class GeneRegulatoryNetwork extends EdgeMaterial implements FitnessFunction<SimpleMaterial> {
+public class GeneRegulatoryNetwork extends EdgeMaterial {
 
   private SimpleMaterial target;
   private List<EdgeGene> edgeList;
@@ -109,54 +109,10 @@ public class GeneRegulatoryNetwork extends EdgeMaterial implements FitnessFuncti
     return 0.5 < Math.random();
   }
 
-  private DataGene[][] generateInitialAttractors(int setSize, double p) {
-    /*
-    Generate a random set of perturbations of the target set for evaluation.
-     */
-    DataGene[][] returnables = new DataGene[setSize][this.target.getSize()];
-
-    for (int i=0; i<setSize; i++) {
-      for (int j=0; j<this.target.getSize(); j++) {
-        returnables[i][j] = (DataGene) this.target.getGene(j).copy();
-        if (Math.random() < p) {
-          returnables[i][j].setRandomValue();
-        }
-      }
-    }
-    return returnables;
-  }
-
   public static<T> void printTwoDimensionArray(T[][] anArray) {
     for (int i=0; i<anArray.length; i++) {
       System.out.println(Arrays.toString(anArray[i]));
     }
-  }
-
-  public double evaluate() {
-    DataGene[][] startAttractors = this.generateInitialAttractors(20, 0.15);
-    double fitnessValues = 0;
-    for (int attractorIndex=0; attractorIndex<startAttractors.length; attractorIndex++) {
-      DataGene[] currentAttractor = startAttractors[attractorIndex];
-      int currentRound = 0;
-      boolean isNotStable;
-      do {
-        DataGene[] updatedState = this.updateState(currentAttractor);
-        isNotStable = this.hasNotAttainedAttractor(currentAttractor, updatedState);
-        currentAttractor = updatedState;
-        currentRound += 1;
-      }
-      while (currentRound < this.maxCycle && isNotStable);
-
-      if (currentRound < maxCycle) {
-        int hammingDistance = this.getHammingDistance(currentAttractor);
-        double thisFitness = Math.pow((1 - (hammingDistance / ((double) this.target.getSize()))), 5);
-        fitnessValues += thisFitness;
-      } else {
-        fitnessValues += 0;
-      }
-    }
-    this.fitness = fitnessValues;
-    return fitnessValues;
   }
 
   public int getHammingDistance(DataGene[] attractor) {
@@ -172,16 +128,6 @@ public class GeneRegulatoryNetwork extends EdgeMaterial implements FitnessFuncti
     return attractor.length - count;
   }
 
-  @Override
-  public double evaluate(@NotNull SimpleMaterial phenotype) {
-    return this.evaluate();
-  }
-
-  @Override
-  public void update() {
-
-  }
-
   public GeneRegulatoryNetwork copy() {
     return new GeneRegulatoryNetwork(this.target.copy(), new ArrayList<>(this.edgeList), this.maxCycle);
   }
@@ -192,19 +138,6 @@ public class GeneRegulatoryNetwork extends EdgeMaterial implements FitnessFuncti
       temp[i] = new DataGene();
     }
     return temp;
-  }
-
-  public DataGene[] updateState(DataGene[] currentState) {
-    DataGene[] updatedState = new DataGene[currentState.length];
-    updatedState = this.initialseDataGeneArray(updatedState);
-    for (int i=0; i<currentState.length; i++) {
-      double influence = 0;
-      for (int j=0; j<currentState.length; j++) {
-        influence += this.edges[i][j].getValue() * currentState[j].getValue();
-      }
-      updatedState[i].setValue(this.checkActivationOrRepression(influence));
-    }
-    return updatedState;
   }
 
   public boolean hasNotAttainedAttractor(final DataGene[] currentState, final DataGene[] updatedState) {

@@ -36,7 +36,7 @@ public class GeneRegulatoryNetworkFactory{
       return new SimpleMaterial(dataGenes);
     }
 
-    private int[][] initialiseEdges(int m, int n) {
+    public int[][] initialiseEdges(int m, int n) {
         List<DirectedEdge> candidates = new ArrayList<DirectedEdge>();
         for (int i=0; i<networkSize; i++) {
             for (int j=0; j<networkSize; j++) {
@@ -85,7 +85,15 @@ public class GeneRegulatoryNetworkFactory{
       return edgeGenes;
     }
 
-
+    public EdgeGene[][] convertConnectionsToEdgeGeneArray(final int[][] connections) {
+      EdgeGene[][] edgeGenes = new EdgeGene[networkSize][networkSize];
+      for (int i=0; i<connections.length; i++) {
+        for (int j=0; j<connections[0].length; j++) {
+          edgeGenes[i][j] = (new EdgeGene(connections[i][j]));
+        }
+      }
+      return edgeGenes;
+    }
 
     public GeneRegulatoryNetwork generateGeneRegulatoryNetwork() {
         int[][] connections = this.initialiseEdges(this.networkSize, this.networkSize);

@@ -1,6 +1,7 @@
 package ga.collections;
 
 import com.sun.istack.internal.NotNull;
+import examples.experiment4.GeneRegulatoryNetwork;
 import ga.components.chromosomes.Chromosome;
 import ga.operations.fitnessFunctions.FitnessFunction;
 import ga.others.Copyable;

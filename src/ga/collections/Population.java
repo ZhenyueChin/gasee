@@ -110,6 +110,10 @@ public class Population<C extends Chromosome> implements Copyable<Population<C>>
         Collections.sort(individuals);
     }
 
+    public void evaluate() {
+
+    }
+
     /**
      * Adds a child/candidate to a pool for the next generation according to the mode.
      * @param candidate candidate to be added

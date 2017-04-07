@@ -72,7 +72,19 @@ public abstract class State<C extends Chromosome> {
         evaluate(true);
     }
 
-    /**
+  public State(@NotNull Population<C> population,
+                  @NotNull Mutator mutator,
+                  @NotNull Reproducer<C> reproducer,
+                  @NotNull Selector<C> selector,
+                  @NotNull int numOfMates) {
+    this.population = population;
+    this.mutator = mutator;
+    this.reproducer = reproducer;
+    this.selector = selector;
+    this.numOfMates = numOfMates;
+  }
+
+  /**
      * Performs recombination using the reproducers operator.
      */
     public abstract void reproduce();

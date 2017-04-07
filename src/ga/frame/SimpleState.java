@@ -53,7 +53,17 @@ public class SimpleState<C extends Chromosome> extends State<C> {
         setReproductionRate(reproductionRate);
     }
 
-    private void filter(final double probability) {
+    public SimpleState(@NotNull final Population<C> population,
+                       @NotNull final Mutator mutator,
+                       @NotNull final Reproducer<C> reproducer,
+                       @NotNull final Selector<C> selector,
+                       final int numOfMates,
+                       final double reproductionRate) {
+      super(population, mutator, reproducer, selector, numOfMates);
+      setReproductionRate(reproductionRate);
+    }
+
+  private void filter(final double probability) {
         if (probability < 0 || probability > 1)
             throw new IllegalArgumentException("Invalid probability value.");
     }

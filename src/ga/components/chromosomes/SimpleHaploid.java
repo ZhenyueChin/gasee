@@ -33,18 +33,25 @@ import ga.operations.expressionMaps.ProjectionMap;
 public class SimpleHaploid extends Haploid<SimpleMaterial, SimpleMaterial> {
 
     private static final ExpressionMap<SimpleMaterial,SimpleMaterial> identityMapping = new ProjectionMap<>(0);
+    private SimpleMaterial material;
 
     /**
      * Constructs a simple haploid. The mapping is the identity map.
      * @param simpleMaterial a single strand of DNA
      */
+
     public SimpleHaploid(SimpleMaterial simpleMaterial) {
         super(simpleMaterial, identityMapping);
+        this.material = simpleMaterial;
     }
 
     @Override
     public SimpleMaterial getPhenotype(final boolean recompute) {
         return genotype.get(0);
+    }
+
+    public SimpleMaterial getMaterial() {
+        return this.material;
     }
 
     @Override

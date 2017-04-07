@@ -11,6 +11,7 @@ import ga.frame.Frame;
 import ga.frame.SimpleFrame;
 import ga.frame.SimpleState;
 import ga.frame.State;
+import ga.operations.fitnessFunctions.FitnessFunction;
 import ga.operations.initializers.Initializer;
 import ga.operations.mutators.Mutator;
 import ga.operations.postOperators.PostOperator;
@@ -41,9 +42,14 @@ public class GeneRegulatoryNetworkMain {
   private static final String outfile = "Exp4.out";
 
   public static void main(String[] args) {
+
     GeneRegulatoryNetworkFactory grnFactory = new GeneRegulatoryNetworkFactory(target, maxCycle, edgeSize);
-    GeneRegulatoryNetwork grn = grnFactory.generateGeneRegulatoryNetwork();
-    grn.evaluate();
+    int[][] connections = grnFactory.initialiseEdges(target.length, target.length);
+
+    FitnessFunction fitnessFunction = new GeneRegulatoryNetworkFitnessFunction(
+      grnFactory.convertIntArrayToDataGenes(target),
+      grnFactory.convertConnectionsToEdgeGeneArray(connections),
+      maxCycle);
 
     Initializer<SimpleHaploid> initializer = new GRNSimpleHaploidInitializer(target.clone(), maxCycle, edgeSize, size);
     Population<SimpleHaploid> population = initializer.initialize();
@@ -55,7 +61,8 @@ public class GeneRegulatoryNetworkMain {
     PostOperator<SimpleHaploid> postOperator = new SimpleFillingOperatorForNormalizable<>(new ProportionalScheme());
     Statistics<SimpleHaploid> statistics = new Exp1Statistics();
     Reproducer<SimpleHaploid> reproducer = new Exp1Reproducer();
-    State<SimpleHaploid> state = new SimpleState<>(population, grn, mutator, reproducer, selector, 2, crossoverRate);
+
+    State<SimpleHaploid> state = new SimpleState<>(population, fitnessFunction, mutator, reproducer, selector, 2, crossoverRate);
     state.record(statistics);
     Frame<SimpleHaploid> frame = new SimpleFrame<>(state,postOperator,statistics);
     frame.setPriorOperator(priorOperator);
