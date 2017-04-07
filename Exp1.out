@@ -1,5 +1,5 @@
-Generation: 0; Delta: 25.0000, Best >> FitnessFunction: 25.0, Genotype/Phenotype: [1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0] <<
-Generation: 1; Delta: 0.0000, Best >> FitnessFunction: 25.0, Genotype/Phenotype: [1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0] <<
-Generation: 2; Delta: 0.0000, Best >> FitnessFunction: 25.0, Genotype/Phenotype: [1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0] <<
-Generation: 3; Delta: 0.0000, Best >> FitnessFunction: 25.0, Genotype/Phenotype: [1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0] <<
-Generation: 4; Delta: 0.0000, Best >> FitnessFunction: 25.0, Genotype/Phenotype: [1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0] <<
+Generation: 0; Delta: 23.0000, Best >> FitnessFunction: 23.0, Genotype/Phenotype: [0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0] <<
+Generation: 1; Delta: 0.0000, Best >> FitnessFunction: 23.0, Genotype/Phenotype: [0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0] <<
+Generation: 2; Delta: 0.0000, Best >> FitnessFunction: 23.0, Genotype/Phenotype: [0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0] <<
+Generation: 3; Delta: 1.0000, Best >> FitnessFunction: 24.0, Genotype/Phenotype: [0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1] <<
+Generation: 4; Delta: 0.0000, Best >> FitnessFunction: 24.0, Genotype/Phenotype: [0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1] <<

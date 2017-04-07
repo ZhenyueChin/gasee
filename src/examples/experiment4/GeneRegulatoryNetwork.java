@@ -45,7 +45,7 @@ public class GeneRegulatoryNetwork extends EdgeMaterial implements FitnessFuncti
     return fitness;
   }
 
-  private void perturb(double mu) {
+  public void perturb(double mu) {
     /*
     Each gene (node) has a chance of mu to mutate.
      */
@@ -56,7 +56,7 @@ public class GeneRegulatoryNetwork extends EdgeMaterial implements FitnessFuncti
     }
   }
 
-  private void toMutate(int i) {
+  public void toMutate(int i) {
     /*
     Mutates the specified gene at index i according to the rule specified in page 9 of the original paper.
      */
@@ -134,7 +134,6 @@ public class GeneRegulatoryNetwork extends EdgeMaterial implements FitnessFuncti
 
   public double evaluate() {
     DataGene[][] startAttractors = this.generateInitialAttractors(20, 0.15);
-    printTwoDimensionArray(startAttractors);
     double fitnessValues = 0;
     for (int attractorIndex=0; attractorIndex<startAttractors.length; attractorIndex++) {
       DataGene[] currentAttractor = startAttractors[attractorIndex];
@@ -175,7 +174,7 @@ public class GeneRegulatoryNetwork extends EdgeMaterial implements FitnessFuncti
 
   @Override
   public double evaluate(@NotNull SimpleMaterial phenotype) {
-    return 0;
+    return this.evaluate();
   }
 
   @Override
@@ -228,11 +227,17 @@ public class GeneRegulatoryNetwork extends EdgeMaterial implements FitnessFuncti
 
   @Override
   public int getSize() {
-    return 0;
+    return this.target.getSize();
   }
 
   @Override
   public Gene getGene(int index) {
     return edges[index/edges.length][index%edges.length];
+  }
+
+  @Override
+  public String toString() {
+    String rtn = "\nA Gene Regulatory Network: \n" + "Target: " + this.target + "\n" + "Network: \n" + this.getEdgeGenesMatrixString();
+    return rtn;
   }
 }

@@ -54,4 +54,15 @@ public class EdgeMaterial extends SimpleMaterial {
     return new EdgeMaterial(strand, this.networkSideSize);
   }
 
+  public String getEdgeGenesMatrixString() {
+    String rtn = "";
+    for (int i=0; i<this.networkSideSize; i++) {
+      for (int j=0; j<this.networkSideSize; j++) {
+        rtn += this.edges[i][j].getValue() + "\t";
+      }
+      rtn += "\n";
+    }
+    return rtn;
+  }
+
 }
