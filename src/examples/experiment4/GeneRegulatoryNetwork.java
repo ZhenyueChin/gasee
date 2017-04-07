@@ -2,7 +2,9 @@ package examples.experiment4;
 
 import com.sun.istack.internal.NotNull;
 import ga.components.genes.DataGene;
+import ga.components.genes.EdgeGene;
 import ga.components.genes.Gene;
+import ga.components.materials.EdgeMaterial;
 import ga.components.materials.Material;
 import ga.components.materials.SimpleMaterial;
 import ga.operations.fitnessFunctions.FitnessFunction;
@@ -17,17 +19,17 @@ import java.util.Random;
  * Created by Zhenyue Qin on 6/04/2017.
  * The Australian National University.
  */
-public class GeneRegulatoryNetwork extends SimpleMaterial implements FitnessFunction<SimpleMaterial> {
+public class GeneRegulatoryNetwork extends EdgeMaterial implements FitnessFunction<SimpleMaterial> {
 
   private SimpleMaterial target;
-  private int[][] edges;
+  private List<EdgeGene> edgeList;
   private double fitness;
   private int maxCycle;
 
-  public GeneRegulatoryNetwork(SimpleMaterial target, int[][] edges, int maxCycle) {
-    super(target.getGeneList());
+  public GeneRegulatoryNetwork(SimpleMaterial target, List<EdgeGene> edgeList, int maxCycle) {
+    super(edgeList, target.getSize());
+    this.edgeList = new ArrayList<>(edgeList);
     this.target = target.copy();
-    this.edges = edges;
     this.maxCycle = maxCycle;
   }
 
@@ -62,7 +64,7 @@ public class GeneRegulatoryNetwork extends SimpleMaterial implements FitnessFunc
     int regulatorNumber = 0; // number of regulators for this gene.
 
     for (int j=0; j<this.edges.length; j++) {
-      if (this.edges[j][i] != 0) { // if the mutated note is regulated by j
+      if (this.edges[j][i].getValue() != 0) { // if the mutated note is regulated by j
         regulatorNumber += 1;
       }
 
@@ -71,26 +73,26 @@ public class GeneRegulatoryNetwork extends SimpleMaterial implements FitnessFunc
       if (Math.random() <= probabilityToLoseInteraction) { // lose an interaction
         List<Integer> interactions = new ArrayList<Integer>();
         for (int edgeIdx=0; edgeIdx<this.edges[0].length; edgeIdx++) {
-          if (this.edges[edgeIdx][i] != 0) {
+          if (this.edges[edgeIdx][i].getValue() != 0) {
             interactions.add(edgeIdx);
           }
           if (interactions.size() > 0) {
             int toRemove = this.generateAnInteger(interactions.size());
-            this.edges[toRemove][i] = 0;
+            this.edges[toRemove][i].setValue(0);
           }
         }
       } else {
         List<Integer> nonInteractions = new ArrayList<Integer>();
         for (int edgeIdx=0; edgeIdx<this.edges[0].length; edgeIdx++) {
-          if (this.edges[edgeIdx][i] == 0) {
+          if (this.edges[edgeIdx][i].getValue() == 0) {
             nonInteractions.add(edgeIdx);
           }
           if (nonInteractions.size() > 0) {
             int toAdd = this.generateAnInteger(nonInteractions.size());
             if (this.flipACoin()) {
-              this.edges[toAdd][i] = 1;
+              this.edges[toAdd][i].setValue(1);
             } else {
-              this.edges[toAdd][i] = -1;
+              this.edges[toAdd][i].setValue(-1);
             }
           }
         }
@@ -182,7 +184,7 @@ public class GeneRegulatoryNetwork extends SimpleMaterial implements FitnessFunc
   }
 
   public GeneRegulatoryNetwork copy() {
-    return new GeneRegulatoryNetwork(this.target.copy(), this.edges.clone(), this.maxCycle);
+    return new GeneRegulatoryNetwork(this.target.copy(), new ArrayList<>(this.edgeList), this.maxCycle);
   }
 
   public DataGene[] initialseDataGeneArray(DataGene[] dataGenes) {
@@ -199,7 +201,7 @@ public class GeneRegulatoryNetwork extends SimpleMaterial implements FitnessFunc
     for (int i=0; i<currentState.length; i++) {
       double influence = 0;
       for (int j=0; j<currentState.length; j++) {
-        influence += this.edges[i][j] * currentState[j].getValue();
+        influence += this.edges[i][j].getValue() * currentState[j].getValue();
       }
       updatedState[i].setValue(this.checkActivationOrRepression(influence));
     }
@@ -226,11 +228,11 @@ public class GeneRegulatoryNetwork extends SimpleMaterial implements FitnessFunc
 
   @Override
   public int getSize() {
-    return this.target.getSize();
+    return 0;
   }
 
   @Override
   public Gene getGene(int index) {
-    return this.target.getGene(index);
+    return edges[index/edges.length][index%edges.length];
   }
 }

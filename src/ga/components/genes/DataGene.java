@@ -9,7 +9,7 @@ import java.util.concurrent.ThreadLocalRandom;
  * The Australian National University.
  */
 public class DataGene extends Gene<Integer> {
-  public static DataGene generateRandomTernaryGene() {
+  public static DataGene generateRandomDataGene() {
     return new DataGene((Math.random() < 0.5) ? -1 : 1);
   }
 

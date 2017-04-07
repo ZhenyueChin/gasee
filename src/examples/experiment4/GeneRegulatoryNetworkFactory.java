@@ -1,9 +1,9 @@
 package examples.experiment4;
 
 import ga.components.GRNs.DirectedEdge;
-import ga.components.GRNs.GRN;
 import ga.components.genes.DataGene;
-import ga.components.genes.GeneFactory;
+import ga.components.genes.EdgeGene;
+import ga.components.materials.EdgeMaterial;
 import ga.components.materials.SimpleMaterial;
 
 import java.util.ArrayList;
@@ -75,8 +75,21 @@ public class GeneRegulatoryNetworkFactory{
         return matrix;
     }
 
+    public List<EdgeGene> convertConnectionsToEdgeGenes(final int[][] connections) {
+      List<EdgeGene> edgeGenes = new ArrayList<>();
+      for (int i=0; i<connections.length; i++) {
+        for (int j=0; j<connections[0].length; j++) {
+          edgeGenes.add(new EdgeGene(connections[i][j]));
+        }
+      }
+      return edgeGenes;
+    }
+
+
+
     public GeneRegulatoryNetwork generateGeneRegulatoryNetwork() {
         int[][] connections = this.initialiseEdges(this.networkSize, this.networkSize);
-        return new GeneRegulatoryNetwork(this.target.copy(), connections, this.maxCycle);
+        List<EdgeGene> edgeGenes = this.convertConnectionsToEdgeGenes(connections);
+        return new GeneRegulatoryNetwork(this.target.copy(), edgeGenes, this.maxCycle);
     }
 }
