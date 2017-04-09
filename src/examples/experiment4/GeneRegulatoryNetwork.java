@@ -33,6 +33,10 @@ public class GeneRegulatoryNetwork extends EdgeMaterial {
     this.maxCycle = maxCycle;
   }
 
+  public void setFitness(double fitness) {
+    this.fitness = fitness;
+  }
+
   public List<DataGene> convertSimpleMaterialToDataGeneArray(SimpleMaterial simpleMaterial) {
     DataGene[] dataGenes = new DataGene[simpleMaterial.getSize()];
     for (int i=0; i<simpleMaterial.getSize(); i++) {

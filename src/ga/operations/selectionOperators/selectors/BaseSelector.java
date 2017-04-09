@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.ThreadLocalRandom;
 
 /*
     GASEE is a Java-based genetic algorithm library for scientific exploration and experiment.
@@ -52,8 +53,14 @@ public abstract class BaseSelector<C extends Chromosome> implements Selector<C> 
     @Override
     public List<C> select(final int numOfMates) {
         Set<Integer> set = new HashSet<>(numOfMates);
+        int whileMax = numOfMates * 5;
+        int whileCount = 0;
         while (set.size() < numOfMates) {
+            if (whileCount > whileMax) {
+              set.add(ThreadLocalRandom.current().nextInt(fitnessValues.size()));
+            }
             set.add(scheme.select(fitnessValues));
+            whileCount += 1;
         }
 
         List<C> parents = new ArrayList<>(numOfMates);

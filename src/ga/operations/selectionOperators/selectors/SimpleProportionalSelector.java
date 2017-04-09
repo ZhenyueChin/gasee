@@ -47,7 +47,11 @@ public class SimpleProportionalSelector<C extends Chromosome> extends BaseSelect
         double sum = 0;
         for (Individual<C> individual : individuals) sum += individual.getFitness();
         for (int i = 0; i < size; i++) {
-            fitnessValues.add(individuals.get(i).getFitness() / sum);
+            if (sum != 0) {
+              fitnessValues.add(individuals.get(i).getFitness() / sum);
+            } else {
+              fitnessValues.add(0.0);
+            }
         }
     }
 }

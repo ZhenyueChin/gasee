@@ -38,6 +38,10 @@ public class EdgeMaterial extends SimpleMaterial {
     }
   }
 
+  public EdgeGene[][] getEdgeGenes() {
+    return this.edges;
+  }
+
   public int getNetworkSideSize() {
     return networkSideSize;
   }

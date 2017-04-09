@@ -55,9 +55,19 @@ public class SimpleFillingOperatorForNormalizable<T extends Chromosome> implemen
         List<Individual<T>> individuals = population.getIndividualsView();
         List<Double> normalized = normalizeFitness(individuals);
         final int amount = population.getSize() - population.getNextGenSize();
+        int whileMax = population.getNextGenSize() * 2;
+        int whileCount = 0;
         while (selected.size() < amount) {
+            // modified
             final int index = scheme.select(normalized);
             if (!survivedIndices.contains(index)) selected.add(index);
+            if (whileCount > whileMax) {
+              for (int i=0; i<amount; i++) {
+                selected.add(i);
+              }
+              break;
+            }
+            whileCount += 1;
         }
         for (Integer i : selected) population.addCandidate(individuals.get(i).copy());
     }
