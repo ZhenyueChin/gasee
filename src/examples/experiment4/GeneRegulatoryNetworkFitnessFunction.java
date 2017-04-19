@@ -121,17 +121,17 @@ public class GeneRegulatoryNetworkFitnessFunction implements FitnessFunction<Sim
      */
     DataGene[][] returnables = new DataGene[setSize][this.target.getSize()];
 
-//    for (int i=0; i<setSize; i++) {
-//      for (int j=0; j<this.target.getSize(); j++) {
-//        returnables[i][j] = (DataGene) this.target.getGene(j).copy();
-//        if (Math.random() < p) {
-//          returnables[i][j].setRandomValue();
-//        }
-//      }
-//    }
+    for (int i=0; i<setSize; i++) {
+      for (int j=0; j<this.target.getSize(); j++) {
+        returnables[i][j] = (DataGene) this.target.getGene(j).copy();
+        if (Math.random() < p) {
+          returnables[i][j].setRandomValue();
+        }
+      }
+    }
 
-//    return returnables;
-    return this.generateDeterministicAttractors();
+    return returnables;
+//    return this.generateDeterministicAttractors();
   }
 
   public int getHammingDistance(DataGene[] attractor) {

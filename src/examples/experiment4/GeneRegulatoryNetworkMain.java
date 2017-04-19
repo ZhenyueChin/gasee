@@ -2,15 +2,13 @@ package examples.experiment4;
 
 import examples.experiment1.Exp1Reproducer;
 import examples.experiment1.Exp1Statistics;
+import ga.collections.Individual;
 import ga.collections.Population;
 import ga.collections.Statistics;
 import ga.components.GRNs.GRNSimpleHaploidInitializer;
 import ga.components.chromosomes.SimpleHaploid;
 import ga.components.genes.DataGene;
-import ga.frame.Frame;
-import ga.frame.SimpleFrame;
-import ga.frame.SimpleState;
-import ga.frame.State;
+import ga.frame.*;
 import ga.operations.fitnessFunctions.FitnessFunction;
 import ga.operations.initializers.Initializer;
 import ga.operations.mutators.Mutator;
@@ -68,19 +66,25 @@ public class GeneRegulatoryNetworkMain {
     // Reproducer for reproduction
     Reproducer<SimpleHaploid> reproducer = new Exp1Reproducer();
 
-    State<SimpleHaploid> state = new SimpleState<>(population, fitnessFunction, mutator, reproducer, selector, 2, crossoverRate);
+    State<SimpleHaploid> state = new GRNOnlyMutationState<>(population, fitnessFunction, mutator, reproducer, selector, 2, crossoverRate);
     state.record(statistics);
     Frame<SimpleHaploid> frame = new SimpleFrame<>(state,postOperator,statistics);
     frame.setPriorOperator(priorOperator);
     statistics.print(0);
 
+
     for (int i = 1; i < maxGen; i++) {
       System.out.println("Current Generation: " + i);
       frame.evolve();
-      if (statistics.getOptimum(i) > maxFit - epsilon)
-        break;
+      double currentBestFitness = 0;
+      for (Individual h : population.getIndividualsView()) {
+        if (h.getFitness() > currentBestFitness) {
+          currentBestFitness = h.getFitness();
+        }
+      }
+      System.out.println("Current Best Fitness: " + currentBestFitness);
     }
-    statistics.save(outfile);
+//    statistics.save(outfile);
 
   }
 }

@@ -32,8 +32,8 @@ public class GeneRegulatoryNetworkPriorOperator implements PriorOperator<SimpleH
   public void preOperate(@NotNull Population<SimpleHaploid> population) {
     population.setMode(PopulationMode.PRIOR);
     List<Individual<SimpleHaploid>> individuals = population.getIndividualsView();
-    for (int i = 0; i < this.numOfElites; i++) {
-      population.addCandidate(individuals.get(i));
+    for (int i = 0; i < individuals.size(); i++) {
+//      population.addCandidate(individuals.get(i));
     }
   }
 }

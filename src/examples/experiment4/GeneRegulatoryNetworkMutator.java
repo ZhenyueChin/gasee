@@ -35,8 +35,12 @@ public class GeneRegulatoryNetworkMutator implements Mutator<SimpleHaploid> {
   public void mutate(@NotNull List<Individual<SimpleHaploid>> individuals) {
     for (Individual<SimpleHaploid> h : individuals) {
 //      because totally there is only one material in this individual
-      GeneRegulatoryNetwork dna = (GeneRegulatoryNetwork) h.getChromosome().getMaterialsView().get(0);
+      Individual<SimpleHaploid> tempH = h.copy();
+      GeneRegulatoryNetwork dna = (GeneRegulatoryNetwork) tempH.getChromosome().getMaterialsView().get(0);
       dna.perturb(this.prob);
+      if (h.getFitness() < tempH.getFitness()) {
+        h = tempH.copy();
+      }
     }
   }
 

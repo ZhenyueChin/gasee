@@ -2,20 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de5f1476-9551-404c-abb5-385bc0c5573f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ga/operations/postOperators/GRNSimpleFillingOperatorForNormalizable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ga/operations/selectionOperators/selectors/GRNSimpleProportionalSelector.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ga-project/ga/operations/postOperators/SimpleFillingOperatorForNormalizable.class" afterPath="$PROJECT_DIR$/out/production/ga-project/ga/operations/postOperators/SimpleFillingOperatorForNormalizable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ga-project/ga/operations/selectionOperators/selectors/BaseSelector.class" afterPath="$PROJECT_DIR$/out/production/ga-project/ga/operations/selectionOperators/selectors/BaseSelector.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ga-project/ga/operations/selectionOperators/selectors/SimpleProportionalSelector.class" afterPath="$PROJECT_DIR$/out/production/ga-project/ga/operations/selectionOperators/selectors/SimpleProportionalSelector.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/examples/experiment4/TestField.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ga/frame/GRNOnlyMutationState.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ga-project/ga/frame/SimpleFrame.class" afterPath="$PROJECT_DIR$/out/production/ga-project/ga/frame/SimpleFrame.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetwork.java" afterPath="$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetwork.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkFitnessFunction.java" afterPath="$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkFitnessFunction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkMain.java" afterPath="$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkMain.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkMutator.java" afterPath="$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkMutator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ga/components/materials/EdgeMaterial.java" afterPath="$PROJECT_DIR$/src/ga/components/materials/EdgeMaterial.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ga/operations/postOperators/SimpleFillingOperatorForNormalizable.java" afterPath="$PROJECT_DIR$/src/ga/operations/postOperators/SimpleFillingOperatorForNormalizable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ga/operations/selectionOperators/selectors/BaseSelector.java" afterPath="$PROJECT_DIR$/src/ga/operations/selectionOperators/selectors/BaseSelector.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ga/operations/selectionOperators/selectors/SimpleProportionalSelector.java" afterPath="$PROJECT_DIR$/src/ga/operations/selectionOperators/selectors/SimpleProportionalSelector.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkPriorOperator.java" afterPath="$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkPriorOperator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ga/frame/SimpleFrame.java" afterPath="$PROJECT_DIR$/src/ga/frame/SimpleFrame.java" />
     </list>
     <ignored path="ga-project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,11 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GeneRegulatoryNetworkMain.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GeneRegulatoryNetworkMain.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="66" column="57" selection-start-line="66" selection-start-column="57" selection-end-line="66" selection-end-column="57" />
+            <state relative-caret-position="1125">
+              <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -49,78 +45,82 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimpleState.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ga/frame/SimpleState.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-237">
-              <caret line="44" column="11" selection-start-line="44" selection-start-column="11" selection-end-line="44" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SimpleFrame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ga/frame/SimpleFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-267">
-              <caret line="41" column="11" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
+            <state relative-caret-position="1035">
+              <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimpleFillingOperator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ga/operations/postOperators/SimpleFillingOperator.java">
+      <file leaf-file-name="GRNOnlyMutationState.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ga/frame/GRNOnlyMutationState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+            <state relative-caret-position="1110">
+              <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
               <folding>
-                <element signature="e#1662#1663#0" expanded="true" />
-                <element signature="e#1698#1699#0" expanded="true" />
+                <element signature="e#3381#3382#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Exp1Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/examples/experiment1/Exp1Main.java">
+      <file leaf-file-name="GeneRegulatoryNetworkMutator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkMutator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="68" column="58" selection-start-line="68" selection-start-column="58" selection-end-line="68" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimpleProportionalSelector.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ga/operations/selectionOperators/selectors/SimpleProportionalSelector.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
+            <state relative-caret-position="480">
+              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding>
-                <element signature="e#1370#1371#0" expanded="true" />
-                <element signature="e#1417#1418#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseSelector.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ga/operations/selectionOperators/selectors/BaseSelector.java">
+      <file leaf-file-name="Population.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ga/collections/Population.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="62" column="28" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
+            <state relative-caret-position="2910">
+              <caret line="215" column="0" selection-start-line="215" selection-start-column="0" selection-end-line="215" selection-end-column="0" />
+              <folding>
+                <element signature="e#6983#6984#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GeneRegulatoryNetwork.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetwork.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Exp4.out" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Exp4.out">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="640">
+              <caret line="3044" column="3" selection-start-line="3044" selection-start-column="3" selection-end-line="3044" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProportionalScheme.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ga/operations/selectionOperators/selectionSchemes/ProportionalScheme.java">
+      <file leaf-file-name="GeneRegulatoryNetworkFitnessFunction.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkFitnessFunction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="26">
-              <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="1246">
+              <caret line="123" column="21" selection-start-line="123" selection-start-column="21" selection-end-line="123" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -147,9 +147,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/examples/experiment5/Exp5Main.java" />
-        <option value="$PROJECT_DIR$/src/examples/experiment5/Exp5Fitness.java" />
-        <option value="$PROJECT_DIR$/src/examples/experiment5/Exp5Initializer.java" />
         <option value="$PROJECT_DIR$/src/examples/experiment3/Exp3Initializer.java" />
         <option value="$PROJECT_DIR$/src/genderGAWithHotspots/components/chromosomes/Coupleable.java" />
         <option value="$PROJECT_DIR$/src/examples/reHotspots/ReHotspotsMain.java" />
@@ -169,7 +166,6 @@
         <option value="$PROJECT_DIR$/src/ga/components/GRNs/GRN.java" />
         <option value="$PROJECT_DIR$/src/ga/components/genes/Gene.java" />
         <option value="$PROJECT_DIR$/src/ga/components/genes/TernaryGene.java" />
-        <option value="$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkPriorOperator.java" />
         <option value="$PROJECT_DIR$/src/ga/components/GRNs/GeneRegulatoryNetworkEdgeMaterial.java" />
         <option value="$PROJECT_DIR$/src/ga/components/genes/DataGene.java" />
         <option value="$PROJECT_DIR$/src/ga/components/genes/EdgeGene.java" />
@@ -183,21 +179,25 @@
         <option value="$PROJECT_DIR$/src/ga/components/chromosomes/SimpleHaploid.java" />
         <option value="$PROJECT_DIR$/src/ga/collections/Individual.java" />
         <option value="$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkFactory.java" />
-        <option value="$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkMutator.java" />
         <option value="$PROJECT_DIR$/src/ga/components/materials/EdgeMaterial.java" />
         <option value="$PROJECT_DIR$/src/ga/frame/SimpleState.java" />
-        <option value="$PROJECT_DIR$/src/ga/frame/SimpleFrame.java" />
         <option value="$PROJECT_DIR$/src/ga/operations/postOperators/SimpleFillingOperatorForNormalizable.java" />
         <option value="$PROJECT_DIR$/src/ga/collections/Population.java" />
         <option value="$PROJECT_DIR$/src/ga/operations/selectionOperators/selectors/SimpleProportionalSelector.java" />
         <option value="$PROJECT_DIR$/src/ga/operations/selectionOperators/selectionSchemes/GRNProportionalScheme.java" />
         <option value="$PROJECT_DIR$/src/ga/operations/postOperators/GRNSimpleFillingOperatorForNormalizable.java" />
-        <option value="$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetwork.java" />
-        <option value="$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkFitnessFunction.java" />
         <option value="$PROJECT_DIR$/src/ga/operations/selectionOperators/selectors/GRNSimpleProportionalSelector.java" />
-        <option value="$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkMain.java" />
         <option value="$PROJECT_DIR$/src/ga/operations/postOperators/SimpleFillingOperator.java" />
         <option value="$PROJECT_DIR$/src/ga/operations/selectionOperators/selectors/BaseSelector.java" />
+        <option value="$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkMutator.java" />
+        <option value="$PROJECT_DIR$/src/examples/experiment4/TestField.java" />
+        <option value="$PROJECT_DIR$/src/ga/frame/GRNOnlyMutationState.java" />
+        <option value="$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkPriorOperator.java" />
+        <option value="$PROJECT_DIR$/Exp4.out" />
+        <option value="$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkMain.java" />
+        <option value="$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkFitnessFunction.java" />
+        <option value="$PROJECT_DIR$/src/ga/frame/SimpleFrame.java" />
+        <option value="$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetwork.java" />
       </list>
     </option>
   </component>
@@ -245,6 +245,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -585,13 +587,11 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="bas&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/operations/selectionOperators/selectors/BaseSelector.java&#10;simple&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/operations/selectionOperators/selectors/SimpleProportionalSelector.java&#10;proportiona&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/operations/selectionOperators/selectionSchemes/ProportionalScheme.java&#10;grn&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/operations/selectionOperators/selectors/GRNSimpleProportionalSelector.java&#10;simplepro&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/operations/selectionOperators/selectors/SimpleProportionalSelector.java&#10;simplest&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/frame/SimpleState.java&#10;prio&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/examples/experiment4/GeneRegulatoryNetworkPriorOperator.java&#10;selectionS&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/operations/selectionOperators/selectionSchemes/SelectionScheme.java&#10;facto&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/examples/experiment4/GeneRegulatoryNetworkFactory.java&#10;proporti&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/operations/selectionOperators/selectors/SimpleProportionalSelector.java&#10;fitne&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/examples/experiment4/GeneRegulatoryNetworkFitnessFunction.java&#10;edge&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/materials/EdgeMaterial.java&#10;gene&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/examples/experiment4/GeneRegulatoryNetwork.java&#10;init&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/GRNs/GRNSimpleHaploidInitializer.java&#10;edgem&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/materials/EdgeMaterial.java&#10;fit&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/examples/experiment4/GeneRegulatoryNetworkFitnessFunction.java&#10;simpleH&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/chromosomes/SimpleHaploid.java&#10;getphe&#9;PSI&#9;JAVA://ga.components.chromosomes.Chromosome#getPhenotype&#10;initia&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/GRNs/GRNSimpleHaploidInitializer.java&#10;main&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/examples/experiment4/GeneRegulatoryNetworkMain.java&#10;SimpleHa&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/chromosomes/SimpleHaploid.java&#10;materia&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/materials/Material.java&#10;simpleh&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/chromosomes/SimpleHaploid.java&#10;state&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/frame/State.java&#10;genere&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/examples/experiment4/GeneRegulatoryNetwork.java&#10;indivi&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/collections/Individual.java&#10;simpleM&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/materials/SimpleMaterial.java&#10;fac&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/examples/experiment4/GeneRegulatoryNetworkFactory.java&#10;genereg&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/examples/experiment4/GeneRegulatoryNetwork.java&#10;Gene&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/examples/experiment4/GeneRegulatoryNetwork.java&#10;Simple&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/materials/SimpleMaterial.java&#10;simplemater&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/materials/SimpleMaterial.java&#10;GeneRe&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/examples/experiment4/GeneRegulatoryNetwork.java&#10;SimpleMa&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/materials/SimpleMaterial.java&#10;GRNSim&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/GRNs/GRNSimpleHaploidInitializer.java&#10;simpleHa&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/chromosomes/SimpleHaploid.java&#10;mater&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/materials/SimpleMaterial.java&#10;simplema&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/materials/SimpleMaterial.java&#10;binar&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/operations/initializers/BinarySimpleHaploidInitializer.java&#10;initializer&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/GRNs/GRNSimpleHaploidInitializer.java&#10;bina&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/operations/initializers/BinarySimpleHaploidInitializer.java&#10;simplehap&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/chromosomes/SimpleHaploid.java&#10;chro&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/chromosomes/Chromosome.java&#10;dominan&#9;PSI&#9;JAVA://examples.experiment2.NgWongDominanceChange&#10;simplehot&#9;PSI&#9;JAVA://genderGAWithHotspots.components.hotspots.SimpleHotspot&#10;indi&#9;PSI&#9;JAVA://ga.collections.Individual&#10;{&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="generegulatorynetworkfi&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/examples/experiment4/GeneRegulatoryNetworkFitnessFunction.java&#10;generegula&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/examples/experiment4/GeneRegulatoryNetworkMutator.java&#10;genere&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/examples/experiment4/GeneRegulatoryNetwork.java&#10;simplestat&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/frame/SimpleState.java&#10;indi&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/collections/Individual.java&#10;simple&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/frame/SimpleFrame.java&#10;bas&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/operations/selectionOperators/selectors/BaseSelector.java&#10;proportiona&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/operations/selectionOperators/selectionSchemes/ProportionalScheme.java&#10;grn&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/operations/selectionOperators/selectors/GRNSimpleProportionalSelector.java&#10;simplepro&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/operations/selectionOperators/selectors/SimpleProportionalSelector.java&#10;simplest&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/frame/SimpleState.java&#10;prio&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/examples/experiment4/GeneRegulatoryNetworkPriorOperator.java&#10;selectionS&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/operations/selectionOperators/selectionSchemes/SelectionScheme.java&#10;facto&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/examples/experiment4/GeneRegulatoryNetworkFactory.java&#10;proporti&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/operations/selectionOperators/selectors/SimpleProportionalSelector.java&#10;fitne&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/examples/experiment4/GeneRegulatoryNetworkFitnessFunction.java&#10;edge&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/materials/EdgeMaterial.java&#10;gene&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/examples/experiment4/GeneRegulatoryNetwork.java&#10;init&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/GRNs/GRNSimpleHaploidInitializer.java&#10;edgem&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/materials/EdgeMaterial.java&#10;fit&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/examples/experiment4/GeneRegulatoryNetworkFitnessFunction.java&#10;simpleH&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/chromosomes/SimpleHaploid.java&#10;getphe&#9;PSI&#9;JAVA://ga.components.chromosomes.Chromosome#getPhenotype&#10;initia&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/GRNs/GRNSimpleHaploidInitializer.java&#10;main&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/examples/experiment4/GeneRegulatoryNetworkMain.java&#10;SimpleHa&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/chromosomes/SimpleHaploid.java&#10;materia&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/materials/Material.java&#10;simpleh&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/chromosomes/SimpleHaploid.java&#10;state&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/frame/State.java&#10;indivi&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/collections/Individual.java&#10;simpleM&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/materials/SimpleMaterial.java&#10;fac&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/examples/experiment4/GeneRegulatoryNetworkFactory.java&#10;genereg&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/examples/experiment4/GeneRegulatoryNetwork.java&#10;Gene&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/examples/experiment4/GeneRegulatoryNetwork.java&#10;Simple&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/materials/SimpleMaterial.java&#10;simplemater&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/materials/SimpleMaterial.java&#10;GeneRe&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/examples/experiment4/GeneRegulatoryNetwork.java&#10;SimpleMa&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/materials/SimpleMaterial.java&#10;GRNSim&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/GRNs/GRNSimpleHaploidInitializer.java&#10;simpleHa&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/chromosomes/SimpleHaploid.java&#10;mater&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/materials/SimpleMaterial.java&#10;simplema&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/materials/SimpleMaterial.java&#10;binar&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/operations/initializers/BinarySimpleHaploidInitializer.java&#10;initializer&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/GRNs/GRNSimpleHaploidInitializer.java&#10;bina&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/operations/initializers/BinarySimpleHaploidInitializer.java&#10;simplehap&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/chromosomes/SimpleHaploid.java&#10;chro&#9;FILE&#9;file:///Users/ChinYuer/Software-Engineering/gasee/src/ga/components/chromosomes/Chromosome.java&#10;dominan&#9;PSI&#9;JAVA://examples.experiment2.NgWongDominanceChange&#10;simplehot&#9;PSI&#9;JAVA://genderGAWithHotspots.components.hotspots.SimpleHotspot&#10;{&#9;null&#9;null" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -602,6 +602,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ga.frame" />
       <recent name="examples.experiment4" />
       <recent name="examples.experiment5" />
     </key>
@@ -647,26 +648,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="Exp3Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="examples.experiment3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="examples.experiment3.Exp3Main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="ga-project" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="false" name="GeneRegulatoryNetworkFactory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -695,6 +676,26 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="examples.experiment4.GeneRegulatoryNetworkMain" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ga-project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestField" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="examples.experiment4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="examples.experiment4.TestField" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -1124,17 +1125,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.Exp1Main" />
       <item index="1" class="java.lang.String" itemvalue="Application.Exp5Main" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Exp3Main" />
-      <item index="3" class="java.lang.String" itemvalue="Application.GeneRegulatoryNetworkFactory" />
-      <item index="4" class="java.lang.String" itemvalue="Application.GeneRegulatoryNetworkMain" />
+      <item index="2" class="java.lang.String" itemvalue="Application.GeneRegulatoryNetworkFactory" />
+      <item index="3" class="java.lang.String" itemvalue="Application.GeneRegulatoryNetworkMain" />
+      <item index="4" class="java.lang.String" itemvalue="Application.TestField" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.GeneRegulatoryNetworkMain" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Exp1Main" />
-        <item index="2" class="java.lang.String" itemvalue="Application.GeneRegulatoryNetworkFactory" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Exp5Main" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Exp3Main" />
+        <item index="1" class="java.lang.String" itemvalue="Application.TestField" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Exp1Main" />
+        <item index="3" class="java.lang.String" itemvalue="Application.GeneRegulatoryNetworkFactory" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Exp5Main" />
       </list>
     </recent_temporary>
   </component>
@@ -1160,7 +1161,8 @@
       <workItem from="1491097456572" duration="4935000" />
       <workItem from="1491351675140" duration="337000" />
       <workItem from="1491352023095" duration="1633000" />
-      <workItem from="1491353763761" duration="73130000" />
+      <workItem from="1491353763761" duration="78406000" />
+      <workItem from="1492578348060" duration="1968000" />
     </task>
     <task id="LOCAL-00001" summary="test pushing">
       <created>1489484525413</created>
@@ -1253,31 +1255,36 @@
       <option name="project" value="LOCAL" />
       <updated>1491565263584</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="simple network, yet not envolve">
+      <created>1491730917917</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1491730917918</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134123000" />
+    <option name="totallyTimeSpent" value="141367000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="23" width="1402" height="797" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32692307" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32692307" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32692307" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31824416" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21611983" sideWeight="0.49086758" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21611983" sideWeight="0.49086758" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32692307" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24978614" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1287,7 +1294,9 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32692307" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32692307" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1315,7 +1324,8 @@
     <MESSAGE value="make edges as material" />
     <MESSAGE value="some issues with type casting" />
     <MESSAGE value="dead loop lol after defining fitness functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="dead loop lol after defining fitness functions" />
+    <MESSAGE value="simple network, yet not envolve" />
+    <option name="LAST_COMMIT_MESSAGE" value="simple network, yet not envolve" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1327,19 +1337,25 @@
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ga/frame/SimpleFrame.java</url>
-          <line>77</line>
+          <url>file://$PROJECT_DIR$/src/ga/frame/SimpleState.java</url>
+          <line>87</line>
           <properties />
-          <option name="timeStamp" value="36" />
+          <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkMain.java</url>
-          <line>70</line>
+          <line>75</line>
           <properties />
-          <option name="timeStamp" value="40" />
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ga/frame/SimpleFrame.java</url>
+          <line>76</line>
+          <properties />
+          <option name="timeStamp" value="60" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="50" />
+      <option name="time" value="61" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1348,30 +1364,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ga/operations/initializers/Initializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ga/components/GRNs/GRN.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ga/components/GRNs/GeneRegulatoryNetworkEdgeMaterial.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ga/components/genes/EdgeGene.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
@@ -1412,15 +1404,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="59" column="44" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/experiment1/Exp1PriorOperator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1428,7 +1411,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="66" column="17" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1436,15 +1418,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2164">
           <caret line="498" column="6" selection-start-line="498" selection-start-column="6" selection-end-line="498" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/experiment1/Exp1Statistics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="44" column="11" selection-start-line="44" selection-start-column="11" selection-end-line="44" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1500,19 +1473,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ga/collections/Individual.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="72" column="23" selection-start-line="72" selection-start-column="23" selection-end-line="72" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ga/collections/Statistics.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1530,7 +1494,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-477">
           <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1550,93 +1513,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
           <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ga/components/genes/DataGene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-282">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="97" column="26" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
-          <folding>
-            <element signature="e#944#954#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ga/operations/selectionOperators/selectionSchemes/GRNProportionalScheme.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkMutator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkPriorOperator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ga/operations/postOperators/GRNSimpleFillingOperatorForNormalizable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkReproducer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ga/operations/selectionOperators/selectionSchemes/GRNProportionalScheme.java" />
     <entry file="file://$PROJECT_DIR$/src/ga/operations/selectionOperators/selectors/Selector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
           <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ga/frame/State.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1099">
-          <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1670,31 +1554,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkFitnessFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="90" column="46" selection-start-line="90" selection-start-column="46" selection-end-line="90" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetwork.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-277">
-          <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1054#1055#0" expanded="true" />
-            <element signature="e#1086#1087#0" expanded="true" />
-            <element signature="e#2434#2443#0" expanded="true" />
-            <element signature="e#2877#2886#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1702,9 +1561,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1712,18 +1568,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ga/collections/Population.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="230" column="24" selection-start-line="230" selection-start-column="24" selection-end-line="230" selection-end-column="24" />
-          <folding>
-            <element signature="e#7404#7405#0" expanded="true" />
-            <element signature="e#7471#7472#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1747,7 +1591,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26">
           <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1762,61 +1605,211 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ga/operations/selectionOperators/selectors/SimpleProportionalSelector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
-          <folding>
-            <element signature="e#1370#1371#0" expanded="true" />
-            <element signature="e#1417#1418#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ga/operations/selectionOperators/selectors/BaseSelector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="62" column="28" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkReproducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ga/operations/postOperators/PostOperator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="23" column="66" selection-start-line="23" selection-start-column="66" selection-end-line="23" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ga/components/genes/DataGene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ga/operations/postOperators/GRNSimpleFillingOperatorForNormalizable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/examples/experiment4/TestField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/examples/experiment1/Exp1PriorOperator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="69" column="16" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/examples/experiment1/Exp1Reproducer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
+        <state relative-caret-position="106">
           <caret line="39" column="11" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ga/operations/selectionOperators/selectors/SimpleProportionalSelector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ga/frame/SimpleState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-237">
-          <caret line="44" column="11" selection-start-line="44" selection-start-column="11" selection-end-line="44" selection-end-column="11" />
+        <state relative-caret-position="308">
+          <caret line="87" column="38" selection-start-line="87" selection-start-column="38" selection-end-line="87" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ga/frame/SimpleFrame.java">
+    <entry file="file://$PROJECT_DIR$/src/ga/collections/Individual.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-267">
-          <caret line="41" column="11" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
+        <state relative-caret-position="248">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding>
+            <element signature="e#1667#1668#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/examples/experiment1/Exp1Statistics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Exp4.out">
+    <entry file="file://$PROJECT_DIR$/src/ga/frame/State.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9255">
-          <caret line="617" column="18" selection-start-line="617" selection-start-column="18" selection-end-line="617" selection-end-column="18" />
-          <folding />
+        <state relative-caret-position="158">
+          <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3948#3949#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkPriorOperator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="66" column="57" selection-start-line="66" selection-start-column="57" selection-end-line="66" selection-end-column="57" />
+        <state relative-caret-position="1125">
+          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ga/frame/SimpleFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ga/collections/Population.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2910">
+          <caret line="215" column="0" selection-start-line="215" selection-start-column="0" selection-end-line="215" selection-end-column="0" />
+          <folding>
+            <element signature="e#6983#6984#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ga/frame/GRNOnlyMutationState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1110">
+          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+          <folding>
+            <element signature="e#3381#3382#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkMutator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exp4.out">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="3044" column="3" selection-start-line="3044" selection-start-column="3" selection-end-line="3044" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetwork.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="670">
+          <caret line="97" column="26" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
+          <folding>
+            <element signature="e#944#954#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/examples/experiment4/GeneRegulatoryNetworkFitnessFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1246">
+          <caret line="123" column="21" selection-start-line="123" selection-start-column="21" selection-end-line="123" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

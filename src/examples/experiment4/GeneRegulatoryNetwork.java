@@ -21,6 +21,12 @@ import java.util.Random;
  */
 public class GeneRegulatoryNetwork extends EdgeMaterial {
 
+  /*
+  todo: In the paper, how the initial population is formed is not entirely clear.
+	are we supposed to have 100 clones of a single random network for the initial population,
+	 or 100 random networks?
+   */
+
   private SimpleMaterial target;
   private List<EdgeGene> edgeList;
   private double fitness;

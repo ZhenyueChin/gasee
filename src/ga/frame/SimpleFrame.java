@@ -75,9 +75,9 @@ public class SimpleFrame<C extends Chromosome> extends Frame<C> {
             state.preOperate(priorOperator);
         state.reproduce();
         state.mutate();
-        state.postOperate(postOperator);
+//        state.postOperate(postOperator);
         state.nextGeneration();
-        state.evaluate(true);
+        state.evaluate(false);
         statistics.nextGeneration();
         state.record(statistics);
     }
