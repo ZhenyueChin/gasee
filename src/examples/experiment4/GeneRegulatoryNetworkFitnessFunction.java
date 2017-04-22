@@ -65,6 +65,7 @@ public class GeneRegulatoryNetworkFitnessFunction implements FitnessFunction<Sim
 
   @Override
   public double evaluate(@NotNull SimpleMaterial phenotype) {
+    /*
     DataGene[][] startAttractors = this.generateInitialAttractors(20, 0.15);
     double fitnessValues = 0;
     for (int attractorIndex=0; attractorIndex<startAttractors.length; attractorIndex++) {
@@ -90,6 +91,18 @@ public class GeneRegulatoryNetworkFitnessFunction implements FitnessFunction<Sim
     }
     ((GeneRegulatoryNetwork) phenotype).setFitness(fitnessValues);
     return fitnessValues;
+    */
+
+    int oneCount = 0;
+    EdgeGene[][] edgeGenes = ((EdgeMaterial) phenotype).getEdgeGenes();
+    for (int i=0; i<edgeGenes.length; i++) {
+      for (int j=0; j<edgeGenes[0].length; j++) {
+        if (edgeGenes[i][j].getValue() == 1) {
+          oneCount += 1;
+        }
+      }
+    }
+    return oneCount;
   }
 
   private DataGene[][] generateDeterministicAttractors() {
